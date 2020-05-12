@@ -8,7 +8,9 @@
 
 ## Usage
 
-Clone this repo, navigate to the directory. To install all dependencies, run
+Clone this repo, then navigate to the directory. 
+
+To install all dependencies, run
 
 ```bash
 npm install
