@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Input from "./components/Input";
 import Preview from "./components/Preview";
 import Upload from "./components/Upload";
 
 const App = () => {
+    const appNode = useRef(null);
     const [topText, updateTopText] = useState("");
     const [bottomText, updateBottomText] = useState("");
     const [imgSrc, updateImage] = useState(
         "https://images.unsplash.com/photo-1589285874275-c5b16f4b3f8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
     );
+
+    useEffect(() => {
+        document.body.style.backgroundImage =
+            "linear-gradient(to bottom, #3a1c71, #d76d77, #ffaf7b)";
+    });
 
     function handleUpload({ target }) {
         if (target.files.length > 0) {
@@ -22,7 +28,7 @@ const App = () => {
     }
 
     return (
-        <div>
+        <div class='App' ref={appNode}>
             <form>
                 <h1>MEME MAKER</h1>
                 <Upload onUpload={handleUpload} />
