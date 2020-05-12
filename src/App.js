@@ -28,7 +28,7 @@ const App = () => {
     }
 
     return (
-        <div class='App' ref={appNode}>
+        <div className='App' ref={appNode}>
             <form>
                 <h1>MEME MAKER</h1>
                 <Upload onUpload={handleUpload} />
