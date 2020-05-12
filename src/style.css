@@ -30,11 +30,12 @@ input {
     margin: auto;
     margin-top: 1rem;
     background-color: rgb(0, 0, 0);
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 1rem;
     color: white;
     border: 3px solid white;
     text-align: center;
+    width: 80%;
 }
 
 .output {
@@ -87,7 +88,7 @@ input[type="file"] {
 label {
     font-style: bold;
     background-color: black;
-    width: 30%;
+    width: 40%;
     border: 2px solid white;
     margin: 1rem auto 1rem auto;
 }
