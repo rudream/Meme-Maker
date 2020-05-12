@@ -1,10 +1,14 @@
 import React from "react";
 
-const Upload = () => {
+const Upload = (props) => {
     return (
         <label id='file-upload'>
             Upload an image!
-            <input type='file' accept='image/png, image/jpeg' />
+            <input
+                type='file'
+                accept='image/png, image/jpeg'
+                onChange={props.onUpload}
+            />
         </label>
     );
 };
