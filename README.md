@@ -3,7 +3,7 @@
 ## Features:
 - Upload your own files
 - Auto resizes your image
-- Custom top text and bottom text
+- Auto resizes your text based on length
 - Save image as png to your computer
 
 ## Usage
