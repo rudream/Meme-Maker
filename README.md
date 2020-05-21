@@ -1,6 +1,6 @@
 # Meme Maker built using React
 
-Demo: https://rudream.github.io/Meme-Maker/index.html
+Demo: https://rudream.github.io/Meme-Maker/
 
 ## Features:
 - Upload your own files
