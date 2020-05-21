@@ -16,19 +16,20 @@ const Preview = (props) => {
         }
         topText.current.innerHTML = `${topText.current.innerText}`.toUpperCase();
         bottomText.current.innerHTML = `${bottomText.current.innerText}`.toUpperCase();
+        console.log(topText.current.innerText.length);
+        topText.current.style.fontSize = `100px`;
+        bottomText.current.style.fontSize = `100px`;
         if (topText.current.innerText.length > 25) {
+            topText.current.style.fontSize = `70px`;
+        }
+        if (topText.current.innerText.length > 50) {
             topText.current.style.fontSize = `50px`;
-        } else if (topText.current.innerText.length > 70) {
-            topText.current.style.fontSize = `20px`;
-        } else {
-            topText.current.style.fontSize = `100px`;
         }
         if (bottomText.current.innerText.length > 25) {
+            bottomText.current.style.fontSize = `70px`;
+        }
+        if (bottomText.current.innerText.length > 50) {
             bottomText.current.style.fontSize = `50px`;
-        } else if (bottomText.current.innerText.length > 70) {
-            bottomText.current.style.fontSize = `20px`;
-        } else {
-            bottomText.current.style.fontSize = `100px`;
         }
     });
 
