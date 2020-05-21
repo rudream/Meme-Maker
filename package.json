@@ -1,25 +1,29 @@
 {
-  "name": "meme-maker",
-  "version": "0.1.0",
-  "description": "",
-  "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "dom-to-image": "^2.6.0",
-    "file-saver": "^2.0.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
-    "babel-preset-nano-react-app": "^0.1.0",
-    "parcel": "^2.0.0-alpha.3.2"
-  },
-  "babel": {
-    "presets": [
-      "nano-react-app"
-    ]
-  }
+    "homepage": "http://rudream.github.io/Meme-Maker",
+    "name": "meme-maker",
+    "version": "0.1.0",
+    "description": "",
+    "scripts": {
+        "start": "parcel index.html",
+        "build": "parcel build index.html",
+        "predeploy": "rm -rf dist && parcel build index.html",
+        "deploy": "gh-pages -d dist"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "dom-to-image": "^2.6.0",
+        "file-saver": "^2.0.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "babel-preset-nano-react-app": "^0.1.0",
+        "gh-pages": "^2.2.0",
+        "parcel": "^2.0.0-alpha.3.2"
+    },
+    "babel": {
+        "presets": [
+            "nano-react-app"
+        ]
+    }
 }
