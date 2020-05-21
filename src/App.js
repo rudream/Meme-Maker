@@ -11,10 +11,6 @@ const App = () => {
         "https://images.unsplash.com/photo-1589285874275-c5b16f4b3f8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
     );
 
-    useEffect(() => {
-        document.body.style.backgroundImage =
-            "linear-gradient(to bottom, #3a1c71, #d76d77, #ffaf7b)";
-    });
 
     function handleUpload({ target }) {
         if (target.files.length > 0) {

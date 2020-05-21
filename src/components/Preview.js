@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import domtoimage from "dom-to-image";
 import { saveAs } from "file-saver";
 
@@ -10,32 +10,25 @@ const Preview = (props) => {
 
     useEffect(() => {
         if (image.current) {
-            if (
-                image.current.offsetWidth < 800 ||
-                image.current.offsetHeight < 800
-            ) {
-                if (image.current.offsetWidth >= image.current.offsetHeight) {
-                    image.current.style.width = "800px";
-                    frame.current.style.height = `${image.current.offsetHeight}px`;
-                    frame.current.style.width = `${image.current.offsetWidth}px`;
-                } else {
-                    image.current.style.height = "800px";
-                    frame.current.style.width = `${image.current.offsetWidth}px`;
-                    frame.current.style.height = `${image.current.offsetHeight}px`;
-                }
-            }
+            image.current.style.offsetWidth = "800px";
+            frame.current.style.height = `${image.current.offsetHeight}px`;
+            frame.current.style.width = `${image.current.offsetWidth}px`;
         }
         topText.current.innerHTML = `${topText.current.innerText}`.toUpperCase();
         bottomText.current.innerHTML = `${bottomText.current.innerText}`.toUpperCase();
-        if (topText.current.innerText.length > 20) {
-            topText.current.style.fontSize = "3rem";
+        if (topText.current.innerText.length > 25) {
+            topText.current.style.fontSize = `50px`;
+        } else if (topText.current.innerText.length > 70) {
+            topText.current.style.fontSize = `20px`;
         } else {
-            topText.current.style.fontSize = "5rem";
+            topText.current.style.fontSize = `100px`;
         }
-        if (bottomText.current.innerText.length > 20) {
-            bottomText.current.style.fontSize = "3rem";
+        if (bottomText.current.innerText.length > 25) {
+            bottomText.current.style.fontSize = `50px`;
+        } else if (bottomText.current.innerText.length > 70) {
+            bottomText.current.style.fontSize = `20px`;
         } else {
-            bottomText.current.style.fontSize = "5rem";
+            bottomText.current.style.fontSize = `100px`;
         }
     });
 
@@ -46,7 +39,7 @@ const Preview = (props) => {
     };
 
     return (
-        <div className='output' ref={frame} onClick={downloadImage}>
+        <div className="output" ref={frame} onClick={downloadImage}>
             <h1 ref={topText}>{props.topText}</h1>
             <h1 ref={bottomText}>{props.bottomText}</h1>
             <img src={props.src} ref={image} />
